@@ -24,7 +24,7 @@ All files were read into R by *run_analysis.R*.
 The Train and Test directories both hold another folder called *Inertial Signals*, each containing nine text files on accelerometer and gyroscope measurements. These files were disregarded  in this project, because the data of interest were summarized in *X_train.txt* and *X_test.txt*.
 
 ## Methods (How *run_analysis.R* works)
-The R script requires the R add-on packages *dplyr* and *tidyr*. It reads the data from a directory called "UCI HAR Dataset", which is NOT in the working directory. If you want to run the script in your own setting, **make sure to adust the variable *data.dir* at the beginning of the script**.
+The R script requires the R add-on packages *dplyr* and *tidyr*. It first tries to read the data from a directory called "UCI HAR Dataset", which is NOT in the working directory. If this directory does not exist, it tries to read the data from the working directory.
 
 The script performs the following tasks:
 1. Read in all data (see section on *Data Provided* above).

@@ -9,7 +9,14 @@
 library(dplyr)
 library(tidyr)
 
-data.dir <- file.path("..", "UCI HAR Dataset")
+# Check if data directory exists. If not, try to read the data from the current working directory
+
+if (file.exists(file.path("..", "UCI HAR Dataset"))) {
+    data.dir <- file.path("..", "UCI HAR Dataset")
+} else {
+    data.dir <- getwd()
+}
+
 train.dir <- file.path(data.dir, "train")
 test.dir <- file.path(data.dir, "test")
 

@@ -101,6 +101,7 @@ This Code Book describes the variables, the data, and any transformations or wor
 
 ### Mean and Standard Deviation
 * **Values:** bounded within [-1,1]
+* **Units:** no units, data were normalized
 * **Origin:** 
     * Labels: *features.txt*
     * Data: *X_train.txt* and *X_test.txt*
